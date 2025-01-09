@@ -31,12 +31,12 @@
 
         <div class="jr__item-content">
           {{ with .summary }}
-            <p class="jr-work__summary">{{ . }}</p>
+            <p class="jr-work__summary">{{ . | markdownify }}</p>
           {{ end }}
           {{ with .highlights }}
             <ul class="jr-work__highlights">
               {{ range . }}
-                <li>{{ . }}</li>
+                <li>{{ . | markdownify }}</li>
               {{ end }}
             </ul>
           {{ end }}
